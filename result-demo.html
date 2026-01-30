@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result Demo</title>
+</head>
+<body>
+
+<script>
+    // Accept user name
+    let userName = prompt("Enter your name:");//let is used to declare a variable
+
+    // Store subjects in an array
+    let subjects = ["Maths", "Science", "English"];
+
+    // Accept marks
+    let marks = [];
+    marks[0] = parseInt(prompt("Enter marks for Maths:"));//parseInt is used to convert string to integer
+    marks[1] = parseInt(prompt("Enter marks for Science:"));
+    marks[2] = parseInt(prompt("Enter marks for English:"));
+
+    // Calculate total and average
+    let total = marks[0] + marks[1] + marks[2];
+    let average = total / subjects.length;
+
+    // Determine pass or fail
+    let result;
+    if (average >= 40) {
+        result = "pass";
+    } else {
+        result = "fail";
+    }
+
+    // Display result using string methods
+    let message = "hi " + userName.toUpperCase() +
+                  ", you have " + result.toUpperCase() +
+                  "ED with an average of " + average.toFixed(2);
+
+    alert(message);
+</script>
+
+</body>
+</html>
